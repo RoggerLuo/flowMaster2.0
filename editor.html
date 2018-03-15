@@ -1,0 +1,112 @@
+<div id="StencilController" ng-controller="StencilController" style="height:100%;">
+    <!-- <div style="width:100%;height:1px;border-top: 12px solid #f1f1f1;padding:0px;"></div> -->
+    <div class="subheader editor-toolbar" id="editor-header" style="display:none;">
+        <div class="btn-group">
+            <div class="btn-toolbar pull-left" ng-controller="ToolbarController" ng-cloak>
+                <button id="{{item.id}}" title="{{item.title | translate}}" ng-repeat="item in items" ng-switch on="item.type" class="btn btn-inverse" ng-class="{'separator': item.type == 'separator'}" ng-disabled="item.type == 'separator' || item.enabled == false" ng-click="toolbarButtonClicked($index)">
+                    <i ng-switch-when="button" ng-class="item.cssClass" class="toolbar-button" data-toggle="tooltip" title="{{item.title | translate}}"></i>
+                    <div ng-switch-when="separator" ng-class="item.cssClass"></div>
+                </button>
+            </div>
+        </div>
+        <div class="btn-group pull-right" ng-show="!secondaryItems.length">
+            <div class="btn-toolbar pull-right" ng-controller="ToolbarController">
+                <button title="{{item.title | translate}}" ng-repeat="item in secondaryItems" ng-switch on="item.type" class="btn btn-inverse" ng-class="{'separator': item.type == 'separator'}" ng-disabled="item.type == 'separator'" ng-click="toolbarSecondaryButtonClicked($index)" id="{{item.id}}">
+                    <i ng-switch-when="button" ng-class="item.cssClass" class="toolbar-button" data-toggle="tooltip" title="{{item.title | translate}}"></i>
+                    <div ng-switch-when="separator" ng-class="item.cssClass"></div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="full" style="height:100%;">
+        <div class="row row-no-gutter" style="height:100%;">
+            <div id="paletteHelpWrapper" class="col-xs-2" style="width: 10%;">
+                <div class="stencils canvas-wrapper" id="paletteSection" style="height:100%;margin:0;">
+                    <div style="height:100%;margin:0;"> <!-- ng-if="stencilItemGroups.length > 1" -->
+                        <div> <!-- style="height:100%;" -->
+                            <ul class="stencil-group" class="first" style="height:100%;display:flex;flex-direction:column;padding-bottom: 20px">
+                                <li style="text-align:center;flex:1;display:flex;flex-direction:column;" ng-repeat="item in flowMasterGroups.paletteItems" class="stencil-item" id="{{item.id}}" title="{{item.description}}" ng-model="draggedElement" data-drag="true" jqyoui-draggable="{onStart:'startDragCallback', onDrag:'dragCallback'}" data-jqyoui-options="{revert: 'invalid', helper: 'clone', opacity : 0.5}">
+                                    <div style="flex:1;display:flex;">
+                                        <div  ng-mouseleave="hover = false" ng-mouseenter="hover = true" style="margin:auto;">
+                                            <img ng-init="hover=false" ng-hide="hover" style="margin:6px 0px;" ng-src="editor-app/stencilsets/bpmn2.0/icons/{{item.icon}}.svg" width="38px;" height="38px;" />
+                                            <div ng-hide="hover" style="font-size:14px;">{{item.name|translate}}</div>
+                                            <img ng-hide="!hover" style="margin:6px 0px;" ng-src="editor-app/stencilsets/bpmn2.0/icons/{{item.icon}}blue.svg" width="38px;" height="38px;" />
+                                            <div ng-hide="!hover" style="font-size:14px;color:#00b0ff;">{{item.name|translate}}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="canvasHelpWrapper" class="col-xs-7" style="width:67%;">
+                <div class="canvas-wrapper" 
+                    id="canvasSection" 
+                    ng-model="droppedElement" 
+                    ng-model="droppedElement" 
+                    data-drop="true" 
+                    data-jqyoui-options jqyoui-droppable="{onDrop:'dropCallback',onOver: 'overCallback', onOut: 'outCallback'}"
+                >
+                    <div class="canvas-message" id="model-modified-date"></div>
+                    <div>
+                        <!-- <div class="Oryx_button" id="delete-button" title="{{'BUTTON.ACTION.DELETE.TOOLTIP' | translate}}" ng-click="deleteShape()" style="display:none"> -->
+                        <div ng-mouseleave="hover = false" 
+                            ng-mouseenter="hover = true" 
+                            class="Oryx_button" 
+                            id="delete-button" 
+                            title="删除" ng-click="deleteShape()" style="display:none;"
+                        >
+                            <img ng-hide="hover"  
+                                ng-init="hover=false" 
+                                src="editor-app/images/delete.svg" 
+                                style='margin:auto;width:15px; height:16px;padding-right:1px;margin-top: 6px;' 
+                            />
+                            <img 
+                                ng-hide="!hover" 
+                                src="editor-app/images/deleteblue.svg" 
+                                style='margin:auto;width:15px; height:16px;padding-right:1px;margin-top: 6px;' 
+                            />
+                        </div>
+
+                        <div ng-mouseleave="hover = false" ng-mouseenter="hover = true" class="Oryx_button" ng-repeat="item in quickMenuItems" id="{{item.id}}" title="{{item.description}}" ng-click="quickAddItem(item.id)" ng-model="draggedElement" data-drag="true" jqyoui-draggable="{onStart:'startDragCallbackQuickMenu', onDrag:'dragCallbackQuickMenu'}" data-jqyoui-options="{revert: 'invalid', helper: 'clone', opacity : 0.5}" style="display:none">
+                            <img ng-src="editor-app/stencilsets/bpmn2.0/icons/{{item.icon}}.svg" ng-hide="hover"  ng-init="hover=false"/>
+                            <img ng-src="editor-app/stencilsets/bpmn2.0/icons/{{item.icon}}blue.svg" ng-hide="!hover"/>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="propertiesHelpWrapper" class="col-xs-3" style="width: 23%;height:100%;border-left: 10px solid #f1f1f1;">
+                <div class="propertySection" id="propertySection" ng-class="{collapsed: propertyWindowState.collapsed}" style="height:100%;">
+                    <div class="selected-item-section" style="position: absolute;width: 100%;height:100%;display: flex;flex-direction: column;">
+                        <!-- clearfix 是header来的 -->
+                        <div class="clearfix" style="margin-bottom: -32px;">
+                            <div class="pull-right" ng-if="selectedItem.auditData.createDate">
+                                <strong>{{'ELEMENT.DATE_CREATED' | translate}}: </strong> {{selectedItem.auditData.createDate}}
+                            </div>
+                            <div class="pull-right" ng-if="selectedItem.auditData.author">
+                                <strong>{{'ELEMENT.AUTHOR' | translate}}: </strong> {{selectedItem.auditData.author}}
+                            </div>
+                            <div class="selected-item-title">
+                                <div class="title-text">{{'NODE.BIG.TITLE' | translate}}</div>
+                            </div>
+                        </div>
+                        <div class="selected-item-body">
+                            <ng-include src="propertyTpl"></ng-include>
+                        </div>
+
+                        <div class="clearfix" style="bottom: 0px;position: absolute;">
+                            <div class="selected-item-bottom">
+                                <div id="bottom-save" class="bottom-text-div">
+                                    <div class="save" >Loading...</div>
+                                    <!-- <div class="save">{{'EDITOR.SAVE' | translate}}</div> -->
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

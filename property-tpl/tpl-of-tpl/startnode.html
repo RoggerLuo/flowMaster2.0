@@ -1,0 +1,31 @@
+
+<div class="property-row-container">
+    <div class="property-row">
+
+
+        <div class="property-row-title" >
+            {{'NODE.RESOURCEID' | translate}}
+        </div>
+
+        <div class="value"> 
+            <div ng-controller="namePropertyCtrl">
+
+                <input type="text" 
+                    ng-model="selectedItem.resourceId"
+                    class="form-control node-name" 
+                    placeholder=" {{'NODE.placeholder' | translate}}" 
+                />
+                
+            </div>
+        </div>
+
+        <div class="property-row-title">
+            开始节点
+            <div style="padding: 0px;
+                    font-weight: 400;
+                    font-size: 13px;
+                    color: rgb(51, 51, 51);">
+            默认节点不可编辑</div>
+        </div>
+    </div>
+</div>

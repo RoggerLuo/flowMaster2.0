@@ -1,0 +1,41 @@
+{    
+    "NODE.NAME":"节点名称",
+    "NODE.RESOURCEID":"节点ID",
+    "EDITOR.SAVE":"保存",
+    "NODE.BIG.TITLE":"节点设置",
+    
+    "UserTask":"审批节点",
+    "ExclusiveGateway":"分支节点",
+    "MultiUserTask":"会签节点",
+    "EndErrorEvent":"异常结束",
+    "SequenceFlow":"连线",
+    "EndNoneEvent":"结束",
+    "StartNoneEvent":"开始",
+    "CirculationTask":"传阅节点",
+    "ParallelGateway":"并行分支",
+    "InclusiveGateway":"并行汇聚",
+    "CustomTask":"自定义任务节点",
+    "ManualTask":"人工分支",
+
+
+    "Start event":"开始",
+    "End event":"结束",
+    "Sequence flow":"连线",
+    "User task":"审批节点",
+    "Exclusive gateway":"分支节点",
+    "End error event":"异常结束",
+    "Multi user task":"会签节点",
+    "Manual task":"人工分支",
+    "Circulation task":"传阅节点",
+    "Parallel gateway":"并行分支",
+    "Inclusive gateway":"并行汇聚",
+    "Custom task":"自定义任务节点",
+    "Subflow":"子流程",
+
+    "Line.remark":"普通连线",
+    "BranchLine":"分支连线",
+    "Line.remark.placeholder":"请输入连线名称",
+    "Line.hint":"连线备注会显示在流程设计界面，更好的为流程流转作诠释。",
+    "NODE.placeholder":"输入节点名称"
+
+}

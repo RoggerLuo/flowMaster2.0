@@ -1,0 +1,38 @@
+
+<div class="property-row-container">
+    <div class="property-row">
+        <div class="property-row-title" >
+            {{'NODE.RESOURCEID' | translate}}
+        </div>
+        <div class="value"> 
+            <div ng-controller="namePropertyCtrl">
+
+                <input type="text" 
+                    ng-model="selectedItem.resourceId"
+                    class="form-control node-name" 
+                    placeholder=" {{'NODE.placeholder' | translate}}" 
+                />
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="property-row">
+        <div class="property-row-title" >
+            {{'NODE.NAME' | translate}}
+        </div>
+        <div class="value"> 
+            <div ng-controller="namePropertyCtrl">
+               
+                <input type="text" 
+                    ng-model="selectedItem.title"
+                    class="form-control node-name" 
+                    ng-blur="inputBlurred()"
+                    ng-change="enterPressed($event);onchangeEqualClick()"
+                    ng-click="namePropertyClicked()"
+                    placeholder=" {{'NODE.placeholder' | translate}}" 
+                />
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,183 @@
+.branchSequenceFlowPropertyCtrl {
+    .icon-shanchu{
+        padding-left: 10px;
+    }
+    .section-title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        font-weight: 600;
+
+        margin: 7px 0;
+        margin-top: 20px;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        line-height: 26px;
+    }
+    .section-content{
+        padding: 8px 0 4px 0;
+        font-size: 13px;
+        color: #717171;
+        margin-bottom: 5px;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .radio-box {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .radio-lable {
+        font-size: 13px;
+    }
+    .radio {
+        display: inline-block;
+        margin: 5px 5px 5px 0px;
+    }
+    .radio-img{
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer;
+
+    }
+    .radio-text{
+        padding:5px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        cursor: pointer;
+
+    }
+    .the3dots {
+        font-size: 13px;
+        margin-right: 8px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        cursor: pointer;
+    }
+    .the3dots:hover{
+        color:#00B1FD;
+    }
+    .rule-control {
+        position: absolute;
+            right: 6px;
+            z-index: 111111;
+            margin-top: 24px;
+        .placeholder {
+            height: 30px;
+        }
+        .options {
+            height: 92px;
+            width: 140px;
+
+            background-image: url('../../images/smallpad.png');
+            background-repeat: no-repeat;
+            background-size: 140px 92px;
+            // background-position: -6px 0px;
+            padding-top: 9px;
+
+
+            text-align: center;
+            background-color: transparent;
+            // -webkit-box-shadow: 0 2px 6px #adadad;
+            // -moz-box-shadow: 0 2px 6px #adadad;
+            // box-shadow: 0 2px 6px #adadad;
+
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            .option {
+                cursor:pointer;
+                line-height: 28px;
+                // height: 34px;
+                padding: 2px;
+            }
+            .option + .option {
+                border-top: 1px solid #DDDDDD;
+            }
+            .option-inner{
+                margin: 2px 9px;
+            }
+            .option-inner:hover {
+                background-color: #e4f7ff;
+            }
+
+        }
+
+    }
+    .solid-container-container {
+        white-space: nowrap;
+        .icon-red-close-for-condition {
+            margin: -8px;
+            color: red;
+            background-color: white;
+            border-radius: 10px;
+            z-index:9999;
+            cursor: pointer;
+        }
+        .solid-container {
+            border: 1px solid #DDDDDD;
+            display: inline-block;
+            margin: 5px 0px;
+            vertical-align: middle;
+            width: 100%;
+            .icon-red-close-for-rule {
+                cursor:pointer;
+                color: red;
+                right: -8px;
+                z-index: 9;
+                top: 25px;
+                background-color: white;
+                border-radius: 10px;
+                position: absolute;
+                z-index:9999;
+
+            }
+            .close-wrap {
+                margin-bottom: -20px;
+                text-align: right;
+            }
+            .condition-container {
+                margin: 8px;
+            }
+            .container-header {
+                height: 31px;
+                line-height: 31px;
+                background-color: #f1f1f1;
+                display: flex;
+                justify-content: space-between;
+                .container-title {
+                    font-size: 13px;
+                    padding: 0 9px;
+                }
+            }
+            .container-row-placeholder {
+                width: 100%;
+                height: 30px;
+                margin: 4px 0px 2px 0px;
+            }
+            .container-row {
+                position: absolute;
+                left: 22px;
+                right: 23px;
+                display: flex;
+                margin-top: 1px;
+            }
+        }
+    }    
+}

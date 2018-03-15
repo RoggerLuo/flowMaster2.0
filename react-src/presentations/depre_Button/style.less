@@ -1,0 +1,71 @@
+.boardbutton {
+    -webkit-user-select: none;
+    /* Chrome all / Safari all /opera15+*/
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+}
+
+.mybutton {
+    font-size: 13px;
+    flex: 1;
+    line-height: 32px;
+    text-align: center;
+    height: 32px;
+    background-color: rgb(0, 176, 255);
+    color: white;
+    display: flex;
+    cursor: pointer;
+    padding: 0 11px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mybutton:active {
+    // background-color: #0273bd;
+}
+
+.myoption {
+    background-image: url('../../../images/pad.png');
+    margin-top: 6px;
+    z-index: 9999;
+    position: absolute;
+    display: inline-block;
+    -webkit-box-shadow: -1px 4px 6px rgba(212, 212, 212, 0.43);
+    -moz-box-shadow: -1px 4px 6px rgba(212, 212, 212, 0.43);
+    box-shadow: -1px 4px 6px rgba(212, 212, 212, 0.43);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-repeat: no-repeat;
+
+    background-size: 134px 127px;
+    background-position: 0px 0px;
+    padding-top: 4px;
+    min-width: 134px;
+
+    .option-wrap {}
+    .option {
+        font-weight: 300;
+        margin: 6px;
+        background-color: white;
+        width: auto;
+        line-height: 33px;
+        height: 33px;
+        font-size: 14px;
+        padding: 0px 10px;
+    }
+    .option+.option {
+        border-top: 1px solid #bfbfbf;
+    }
+    .option:hover {
+        background-color: #e4f7ff;
+    }
+    .option:active {
+        background-color: #00b0ff;
+        color: white;
+    }
+}

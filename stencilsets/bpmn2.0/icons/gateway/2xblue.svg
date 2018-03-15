@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>审批节点</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    
+    <g  transform="scale(0.8,0.8)translate(5,5)"  id="sid-A360152F-C75E-461E-97EC-5DC2803469D8" title="Exclusive gateway">
+      
+        <path d=" M0 20.5  L20.5 0  L40 20.5  L20.5 40  z" id="sid-A360152F-C75E-461E-97EC-5DC2803469D8bg_frame" fill="white"  stroke="#00b0ff" style="stroke-width:2"></path>
+        <g id="sid-A360152F-C75E-461E-97EC-5DC2803469D8cross">
+          <path id="sid-A360152F-C75E-461E-97EC-5DC2803469D8crosspath" stroke="#00b0ff" fill="#00b0ff" d=" M13.25 12.05  L17.25 12.05  L27.65 28.95  L23.75 28.95  z" style="stroke-width:1"></path>
+          <path id="sid-A360152F-C75E-461E-97EC-5DC2803469D8crosspath2" stroke="#00b0ff" fill="#00b0ff" d=" M13.25 28.95  L23.75 12.05  L27.65 12.05  L17.25 28.95  z" style="stroke-width:1"></path> 
+        </g>
+        
+        
+      </g>
+
+</svg>

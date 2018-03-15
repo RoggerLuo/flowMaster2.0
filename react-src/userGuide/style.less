@@ -1,0 +1,102 @@
+.userGuideComponent {
+    .slice {
+        color: white;
+        background-color: #1f1f1f;
+        width: 210px;
+        height: 100px;
+        border-radius: 6px;
+        position: relative;
+        padding: 13px 20px 13px 20px;
+        font-size: 13px;
+        display: flex;
+        flex-direction:column;
+        .title-text{flex:1;}
+        .content-text{flex:1;color:#ccc;}
+        .bottom-text{
+            text-align: right;
+            .stopremind{
+                cursor: pointer;
+            }
+            .stopremind:active{
+                color:black;
+            }
+            .iknow{
+                color:#ffd800;
+                padding-left: 10px;
+                cursor: pointer;
+
+            }
+        }
+        
+    }
+    .slice1 {
+        left: 5%;
+        top: 21%;
+    }
+    .slice2 {
+        margin: auto;
+        top: 21%;
+    }
+    .slice3 {
+        left: -5%;
+        top: 36%;
+    }
+    -webkit-user-select: none;
+    /* Chrome all / Safari all /opera15+*/
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    user-select: none;
+    .cover {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        // background-color:  rgba(50, 54, 61, 0.6);;
+        z-index: 99999;
+    }
+    .black {
+        background-color: rgba(50, 54, 61, 0.6);;
+    }
+    .white {
+        background-color: transparent;
+    }
+    .header {}
+    .body {
+        // border-top: 10px solid rgba(50, 54, 61, 0.6);;
+        height: 100%;
+        display: flex;
+        .left {
+            width: 10%;
+            height: 100%;
+            margin-right: -10px;
+        }
+        .left-border {
+            width: 10px;
+            height: 100%;
+            // background-color:  rgba(50, 54, 61, 0.6);;
+        }
+        .middle {
+            height: 100%;
+            width: 67%;
+            display: flex;
+            .middle-text {
+                margin: auto;
+                font-size: 26px;
+                color: #CCC;
+            }
+        }
+        .right {
+            height: 100%;
+            width: 23%;
+            margin-left: -10px;
+        }
+        .right-border {
+            width: 10px;
+            height: 100%;
+            background-color: rgba(50, 54, 61, 0.6);;
+        }
+    }
+}

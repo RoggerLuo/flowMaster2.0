@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>并行节点</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g transform="scale(0.9)" id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="所有节点" transform="translate(-70.000000, -712.000000)" fill-rule="nonzero" fill="#00b0ff">
+            <path d="M72.1313708,726.849242 L85.8492424,740.567114 L99.567114,726.849242 L85.8492424,713.131371 L72.1313708,726.849242 Z M85.8492424,712 L100.698485,726.849242 L85.8492424,741.698485 L71,726.849242 L85.8492424,712 Z M84.9152424,721.849242 L84.9152424,725.901242 L80.8492424,725.901242 L80.8492424,727.853242 L84.9152424,727.853242 L84.9152424,731.919242 L86.8672424,731.919242 L86.8672424,727.853242 L90.9192424,727.853242 L90.9192424,725.901242 L86.8672424,725.901242 L86.8672424,721.849242 L84.9152424,721.849242 Z" id="并行节点"></path>
+        </g>
+    </g>
+</svg>
