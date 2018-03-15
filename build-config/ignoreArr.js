@@ -8,7 +8,8 @@ var arr = [
     "redux",
     "node_modules",
     "react-src",
-    "qingfont"
+    "qingfont",
+    ".git"
 ]
 
 module.exports = arr

@@ -20,12 +20,6 @@ export default function($scope) {
 
 
 
-    // 启动mode    
-    const version = fm.getUrlQueryParam("version")
-    if (version != 'undefined') {
-        fm.isSpecificVersionEditMode = true
-        fm.version = version
-    }
-    fm.versionId = fm.getUrlQueryParam("versionId")        
+      
 
 }
