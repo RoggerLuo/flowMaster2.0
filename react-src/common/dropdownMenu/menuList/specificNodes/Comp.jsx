@@ -10,7 +10,8 @@ const Component = ({ data, dispatch, put, choosedOption2, specificRolesData }) =
         choosedOption2 = specificRolesData[0]
     }else{
         choosedOption2 = specificRolesData.filter(el=>el.value == choosedOption2.value)[0]
-    }        
+    }       
+    specificRolesData.unshift({ text:'开始节点', value:'START_USER_TASK' })
     const Dropdown = fm.common.Dropdown
     return (
         <div style={{textAlign:'center'}}>
