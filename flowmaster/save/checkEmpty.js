@@ -62,6 +62,17 @@ export default ($scope) => {
 
                     return true
                 }
+
+                return el.properties.multiinstance_parties.some(_el=>{
+                    if(_el.length ==0){
+                        window.showAlert('"' + el.properties.name + '"内容不能为空') //审批节点
+                        fm.spotlight(fm.getShapeById(el.resourceId))
+                        return true                        
+                    }else{
+                        return false
+                    }
+                })
+
                 break
         }
     })

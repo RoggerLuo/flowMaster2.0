@@ -8,9 +8,6 @@ import forSfsInGates from './forSfsInGates'
 
 export default function($scope, $http) {
     return function(callback) {
-        console.log(fm.getNodes())
-        console.log(fm.getJson())
-        debugger
         rdx.store.dispatch({ type: 'saveDeactive' })
         
         if (!integrityChecking()) return rdx.save()
